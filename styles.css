@@ -65,10 +65,16 @@ main {
     transform: translate(-50%, -50%);
     position: fixed;
     min-height: 70vh;
-    min-width: 30vw;
+    width: 30vw;
+    min-width: 500px;
     background-color: #06171E;
     border: 2px solid #124658;
     border-radius: 24px;
+}
+
+.resp_image img {
+    height: 150px;
+    width: 150px;
 }
 
 footer {
