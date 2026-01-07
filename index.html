@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
         <img src="./img/logo.png" alt="fotogram_logo">
     </header>
-    <main>
-        <div class="content">
+    <main onclick="overlay_close(event)">
+        <div id="cloudy" class="content">
             <h1>Greek Islands</h1>
             <div class="images">
-                <img onclick="resp_overlay" src="./img/blue-115762_1280.jpg" alt="">
-                <img src="./img/blue-cave-590336_1280.jpg" alt="">
-                <img src="./img/chair-2736513_1280.jpg" alt="">
-                <img src="./img/greece-6821802_1280.jpg" alt="">
-                <img src="./img/island-203153_1280.jpg" alt="">
-                <img src="./img/mykonos-5181484_1280.jpg" alt="">
-                <img src="./img/rhodes-2088130_1280.jpg" alt="">
-                <img src="./img/santorin-1700274_1280.jpg" alt="">
-                <img src="./img/santorin-1788606_1280.jpg" alt="">
-                <img src="./img/santorini-169239_1280.jpg" alt="">
-                <img src="./img/santorini-86815_1280.jpg" alt="">
-                <img src="./img/zakynthos-1583095_1280.jpg" alt="">
-            </div>
-            <div class="resp_image overlay">
-            </div>
+                <img onclick="resp_overlay(event)" src="./img/blue-115762_1280.jpg" alt="a_blue_door">
+                <img onclick="resp_overlay(event)" src="./img/blue-cave-590336_1280.jpg" alt="a_cave_on_sea">
+                <img onclick="resp_overlay(event)" src="./img/chair-2736513_1280.jpg" alt="blue_chair">
+                <img onclick="resp_overlay(event)" src="./img/greece-6821802_1280.jpg" alt="greek_island">
+                <img onclick="resp_overlay(event)" src="./img/island-203153_1280.jpg" alt="greek_island">
+                <img onclick="resp_overlay(event)" src="./img/mykonos-5181484_1280.jpg" alt="mykonos">
+                <img onclick="resp_overlay(event)" src="./img/rhodes-2088130_1280.jpg" alt="rhodes">
+                <img onclick="resp_overlay(event)" src="./img/santorin-1700274_1280.jpg" alt="santorin">
+                <img onclick="resp_overlay(event)" src="./img/santorin-1788606_1280.jpg" alt="santorin">
+                <img onclick="resp_overlay(event)" src="./img/santorini-169239_1280.jpg" alt="santorin">
+                <img onclick="resp_overlay(event)" src="./img/santorini-86815_1280.jpg" alt="santorin">
+                <img onclick="resp_overlay(event)" src="./img/zakynthos-1583095_1280.jpg" alt="zakynthos">
     </main>
+    </div>
+    <div id="resp_image">
+    </div>
+
     <footer>
 
     </footer>
