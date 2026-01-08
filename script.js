@@ -44,11 +44,11 @@ function resp_overlay(event, index) {
 
 
 function getOverlayContent(i) {
-    return `<div>
-            <h2>
-                ${fotoTitles[i]}
-            </h2>
-             <img class:"overlayFoto" src="./img/Close icon.png" alt="">
+    return `<div style="flex-direction: row;"></div>
+            <h2 style="padding:150px 20px">
+            ${fotoTitles[i]}
+        </h2>
+            <img onclick="overlay_close()" style="width: 32px; height: 32px;" src="./img/Close icon.png" alt="">
         </div>
         <div>
             <img src="${fotos[i]}" alt=""></img>
