@@ -77,20 +77,30 @@ main {
     background-color: #06171E;
     border: 2px solid #124658;
     border-radius: 24px;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 #resp_image.overlay img {
-    position: absolute;
-    padding: 200px 20px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
     object-fit: cover;
     height: 360px;
     width: 560px;
 }
 
-.overlayFoto img {
-    height: 32px;
-    width: 32px;
+.overlayHeader {
+    margin-top: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.overlayClose img {
+    width: 32px !important;
+    height: 32px !important;
 }
 
 footer {
