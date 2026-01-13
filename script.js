@@ -78,7 +78,7 @@ function getOverlayContent(i, l) {
             <div>
                 <img src="${fotos[i]}" alt=""></img>
             </div>
-            <div class="overlayArows">
+            <div class="overlayArrows">
                 <img onclick="prewFoto(${[i]},${[l]})" src="./img/Button left.png" alt="arrow_point_left">
                 <p class="counter">${[i + 1]}/${[l]}</p>
                 <img onclick="nextFoto(${[i]},${[l]})" src="./img/Button right.png" alt="arrow_point_right">
