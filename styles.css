@@ -58,6 +58,7 @@ main {
 
 .content img:hover {
     cursor: pointer;
+    filter: brightness(1.2);
 }
 
 #resp_image {
@@ -165,14 +166,14 @@ footer {
         width: 100%;
     }
 
-    main{
+    main {
         padding: 40px 0;
         margin: 0;
     }
 
     .images {
-    gap: 20px 8px;
-}
+        gap: 20px 8px;
+    }
 
     html {
         scroll-behavior: smooth;
