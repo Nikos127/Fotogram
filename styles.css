@@ -201,7 +201,7 @@ footer {
 
     footer {
         display: flex;
-        height: 120px;
+        height: 100px;
         background-image: url(img/Footer.png);
         background-size: cover;
         background-repeat: no-repeat;
