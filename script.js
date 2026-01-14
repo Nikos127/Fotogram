@@ -27,6 +27,9 @@ let fotos = [
     "./img/santorini-86815_1280.jpg",
     "./img/zakynthos-1583095_1280.jpg"
 ]
+
+let currentFoto = 0;
+
 function fotosFiltered(index) {
     window.scrollTo(0, 0);
     resp_overlay(index);
@@ -60,12 +63,16 @@ function resp_overlay(index) {
     document.getElementById('overflow').classList.add('overlay');
     event.stopPropagation();
 
+
     let overlayRef = document.getElementById('resp_image');
     overlayRef.innerHTML = "";
     let i = index;
     let l = fotos.length;
+    currentFoto = index;
     overlayRef.innerHTML = getOverlayContent(i, l);
 }
+
+
 
 function getOverlayContent(i, l) {
     return `<div>
@@ -93,3 +100,17 @@ function overlay_close() {
     document.getElementById('cloudy').classList.remove('cloudy');
     document.getElementById('overflow').classList.remove('overlay');
 }
+
+document.addEventListener('keydown', function (x) {
+    if (x.key === 'Escape') {
+        overlay_close();
+    }
+    else if
+        (x.key === 'ArrowLeft') {
+        prewFoto(currentFoto, fotos.length);
+    }
+    else if
+        (x.key === 'ArrowRight') {
+        nextFoto(currentFoto, fotos.length);
+    }
+})
