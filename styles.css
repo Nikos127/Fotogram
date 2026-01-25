@@ -3,6 +3,13 @@
     color: white;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #06171E;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -25,8 +32,14 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #06171E;
-    min-height: 70vh;
+    flex-grow: 1;
     padding: 40px 0;
+}
+
+.radius {
+    border-radius: 100% 100% 0 0;
+    border: 16px solid #09212A;
+    background-color: #09212A;
 }
 
 button {
@@ -42,6 +55,7 @@ button {
     flex-direction: column;
     align-items: center;
     width: 95%;
+    max-width: 1440px;
 }
 
 .cloudy {
@@ -140,12 +154,18 @@ button {
 
 footer {
     display: flex;
-    height: 120px;
-    background-image: url(img/Footer.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #06171E;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #09212A;
+    height: 100px;
+}
+
+footer img {
+    height: 32px;
+    width: 135px;
+    padding-bottom: 8px;
 }
 
 @media(max-width: 767px) {
@@ -223,12 +243,6 @@ footer {
     }
 
     footer {
-        display: flex;
-        height: 100px;
-        background-image: url(img/Footer.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #06171E;
+        height: 80px;
     }
 }
