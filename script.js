@@ -1,16 +1,16 @@
 let fotoTitles = [
-    "blue - cave - 590336_1280",
-    "chair - 2736513_1280",
-    "greece - 6821802_1280",
-    "island - 203153_1280",
-    "blue - 115762_1280",
-    "mykonos - 5181484_1280",
-    "rhodes - 2088130_1280",
-    "santorin - 1700274_1280",
-    "santorin - 1788606_1280",
-    "santorini - 169239_1280",
-    "santorini - 86815_1280",
-    "zakynthos - 1583095_1280"
+    "Blue Cave Serenity",
+    "Sunlit Seaside Chair",
+    "Essence of Greece",
+    "Island Escape",
+    "Blue Door in the Sunlight",
+    "Magic of Mykonos",
+    "Rhodes Coastal Charm",
+    "Santorini Dream Coast",
+    "Santorini Sunset Blues",
+    "Santorini Cliffside Dawn",
+    "Aegean Archway View",
+    "Stone Windmill Above the Aegean"
 ]
 
 let fotos = [
