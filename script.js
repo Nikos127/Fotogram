@@ -34,34 +34,34 @@ function fotosFiltered(index) {
     respOverlay(index);
 }
 
-function nextFoto(index, length) {
-    if (index >= length - 1) {
-        index = 0;
-        respOverlay(index);
-    }
-    else {
-        index++;
-        respOverlay(index);
-    }
+function scrollPhoto(index, length, direction) {
+    if (direction === 'next') {
+        if (index >= length - 1) {
+            index = 0;
+            respOverlay(index);
+        }
+        else {
+            index++;
+            respOverlay(index);
+        }
 
-    setTimeout(function () {
-        document.querySelector('.overlayArrows img:last-child').focus();
-    }, 50);
-}
-
-function prewFoto(index, length) {
-    if (index <= 0) {
-        index = length - 1;
-        respOverlay(index);
+        setTimeout(function () {
+            document.querySelector('.overlayArrows img:last-child').focus();
+        }, 50);
     }
-    else {
-        index--;
-        respOverlay(index);
+    else if (direction === 'prev') {
+        if (index <= 0) {
+            index = length - 1;
+            respOverlay(index);
+        }
+        else {
+            index--;
+            respOverlay(index);
+        }
+        setTimeout(function () {
+            document.querySelector('.overlayArrows img:first-child').focus();
+        }, 50);
     }
-
-    setTimeout(function () {
-        document.querySelector('.overlayArrows img:first-child').focus();
-    }, 50);
 }
 
 function respOverlay(index) {
@@ -97,9 +97,9 @@ function getOverlayContent(index, length) {
                 <img src="${fotos[index]}" alt=""></img>
             </div>
             <div class="overlayArrows">
-                <img onclick="prewFoto(${index},${length})" onkeydown="if(event.key==='Enter') prewFoto(${index},${length})" src="./img/Button left.png" alt="arrowPointLeft" tabindex="0">
+                <img onclick="scrollPhoto(${index},${length}, 'prev')" onkeydown="if(event.key==='Enter') scrollPhoto(${index},${length}, 'prev')" src="./img/Button left.png" alt="arrowPointLeft" tabindex="0">
                 <p class="counter">${index + 1}/${length}</p>
-                <img onclick="nextFoto(${index},${length})" onkeydown="if(event.key==='Enter') nextFoto(${index},${length})" src="./img/Button right.png" alt="arrowPointRight" tabindex="0">
+                <img onclick="scrollPhoto(${index},${length}, 'next')" onkeydown="if(event.key==='Enter') scrollPhoto(${index},${length}, 'next')" src="./img/Button right.png" alt="arrowPointRight" tabindex="0">
         </div>`
 }
 
@@ -120,10 +120,10 @@ document.addEventListener('keydown', function (x) {
     }
     else if
         (x.key === 'ArrowLeft') {
-        prewFoto(currentFoto, fotos.length);
+        scrollPhoto(currentFoto, fotos.length, 'prev');
     }
     else if
         (x.key === 'ArrowRight') {
-        nextFoto(currentFoto, fotos.length);
+        scrollPhoto(currentFoto, fotos.length, 'next');
     }
 })
