@@ -111,16 +111,20 @@ button {
 
 #respImage.overlay img {
     margin: 0 auto;
-    padding-top: 20px;
     display: flex;
     object-fit: cover;
-    width: 80%;
-    height: 380px;
+    width: auto;
+    max-width: 35vw;
+    height: 45vh;
+}
+
+.overlayPhoto img {
+    min-width: 45vh;
 }
 
 .overlayHeader {
     margin-top: 80px;
-    padding: 0 10%;
+    padding: 0 10% 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -240,11 +244,14 @@ footer img {
 
     #respImage.overlay img {
         margin: 0 auto;
-        padding-top: 20px;
         display: flex;
         object-fit: cover;
-        width: 80%;
-        height: 380px;
+    }
+
+    .overlayPhoto img {
+        min-width: 80vw !important;
+        width: auto !important;
+        height: 45vh !important;
     }
 
     .overlayArrows {

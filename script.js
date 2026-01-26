@@ -65,31 +65,30 @@ function respOverlay(index) {
 
     let overlayRef = document.getElementById('respImage');
     overlayRef.innerHTML = "";
-    let i = index;
-    let l = fotos.length;
+    let length = fotos.length;
     currentFoto = index;
-    overlayRef.innerHTML = getOverlayContent(i, l);
+    overlayRef.innerHTML = getOverlayContent(index, length);
 }
 
 
 
-function getOverlayContent(i, l) {
+function getOverlayContent(index, length) {
     return `<div>
             <div class="overlayHeader">
                 <h2>
-                    ${fotoTitles[i]}
+                    ${fotoTitles[index]}
                 </h2>
                 <div class="overlayClose">
                     <img onclick="overlayClose()" src="./img/Close icon.png" alt=""></img>
                 </div>
             </div>
-            <div>
-                <img src="${fotos[i]}" alt=""></img>
+            <div class="overlayPhoto">
+                <img src="${fotos[index]}" alt=""></img>
             </div>
             <div class="overlayArrows">
-                <img onclick="prewFoto(${[i]},${[l]})" src="./img/Button left.png" alt="arrowPointLeft">
-                <p class="counter">${[i + 1]}/${[l]}</p>
-                <img onclick="nextFoto(${[i]},${[l]})" src="./img/Button right.png" alt="arrowPointRight">
+                <img onclick="prewFoto(${index},${length})" src="./img/Button left.png" alt="arrowPointLeft">
+                <p class="counter">${index + 1}/${length}</p>
+                <img onclick="nextFoto(${index},${length})" src="./img/Button right.png" alt="arrowPointRight">
             </div>
         </div>`
 }
