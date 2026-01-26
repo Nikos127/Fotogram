@@ -12,10 +12,16 @@ body {
 
 header {
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #09212A;
     height: 80px;
-    padding-left: 8vb;
+    padding: 0 48px;
+}
+
+.logo {
+    background-color: #09212A;
+    width: 1440px;
 }
 
 header img {
@@ -181,9 +187,15 @@ footer img {
     header {
         display: flex;
         padding: 0;
-        justify-content: center;
         background-color: #09212A;
         height: 80px;
+    }
+
+    .logo {
+        background-color: #09212A;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     header img {
